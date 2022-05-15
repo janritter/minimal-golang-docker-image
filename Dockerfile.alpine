@@ -1,0 +1,9 @@
+FROM alpine:latest
+
+WORKDIR /
+
+RUN apk --no-cache add ca-certificates
+
+ADD dist/google-caller ./google-caller
+
+CMD [ "/google-caller" ]

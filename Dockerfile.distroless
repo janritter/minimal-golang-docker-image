@@ -1,0 +1,5 @@
+FROM gcr.io/distroless/static
+
+ADD dist/google-caller ./google-caller
+
+ENTRYPOINT [ "/google-caller" ]
